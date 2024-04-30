@@ -16,11 +16,10 @@ def author(django_user_model):
 
 
 @pytest.fixture
-def news(author):
+def news():
     news = News.objects.create(
         title='Заголовок',
         text='Текст',
-        author=author,
     )
     return news
 
